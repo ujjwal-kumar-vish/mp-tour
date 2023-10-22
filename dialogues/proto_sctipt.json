@@ -1,0 +1,8 @@
+[
+	{"name": "Brother", "expression": "neutral", "text": "what is this place Father...?"},
+	{"name": "Father", "expression": "neutral", "text": "This is a <insert place name here>."},
+	{"name": "Brother", "expression": "neutral", "text": "what is this famouse for?"},
+	{"name": "Father", "expression": "neutral", "text": "it is famous for <insert text here>"},
+	{"name": "Brother", "expression": "neutral", "text": "Ooooooo..... is this the same place that i read about in my text book."},
+	{"name": "Father", "expression": "neutral", "text": "Yes"},
+]

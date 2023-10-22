@@ -1,0 +1,22 @@
+# Ignore Godot project settings
+.import/
+.import/
+.export/
+.import/
+.import/
+.import/
+.export/
+.import/
+.import/
+export.cfg
+.import/
+.import/
+.import/
+.export/
+.import/
+.import/
+.export/
+# Ignore system files
+.DS_Store
+Thumbs.db
+

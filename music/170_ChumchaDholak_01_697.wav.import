@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/170_ChumchaDholak_01_697.wav-77beadbd92082e14b9e0fbd09075b31a.sample"
+
+[deps]
+
+source_file="res://music/170_ChumchaDholak_01_697.wav"
+dest_files=[ "res://.import/170_ChumchaDholak_01_697.wav-77beadbd92082e14b9e0fbd09075b31a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
