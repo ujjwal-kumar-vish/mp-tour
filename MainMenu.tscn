@@ -7,7 +7,7 @@
 [ext_resource path="res://Default_0.tres" type="Theme" id=5]
 [ext_resource path="res://music/Dholak_06_697.wav" type="AudioStream" id=6]
 [ext_resource path="res://music/DryToneKanjira_730.wav" type="AudioStream" id=7]
-[ext_resource path="res://ART/—Pngtree—black gradient vertical transparent_5659187.png" type="Texture" id=8]
+[ext_resource path="res://ART/gradient .png" type="Texture" id=8]
 [ext_resource path="res://ART/back_img2.png" type="Texture" id=9]
 [ext_resource path="res://ART/Horizontal-Veena-1024x1024.png" type="Texture" id=10]
 
@@ -60,6 +60,8 @@ font_data = ExtResource( 4 )
 pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -1.0
+margin_right = -1.0
 theme = ExtResource( 5 )
 script = ExtResource( 1 )
 
@@ -69,9 +71,9 @@ position = Vector2( 574, 343 )
 scale = Vector2( 0.751875, 0.785848 )
 texture = ExtResource( 3 )
 
-[node name="—Pngtree—blackGradientVerticalTransparent5659187" type="Sprite" parent="."]
-position = Vector2( 375.5, 300.5 )
-scale = Vector2( 0.3012, 0.2428 )
+[node name="Gradient" type="Sprite" parent="."]
+position = Vector2( 506.5, 276 )
+scale = Vector2( 0.418, 0.2744 )
 texture = ExtResource( 8 )
 
 [node name="Menu" type="VBoxContainer" parent="."]
@@ -86,7 +88,7 @@ margin_bottom = 145.0
 
 [node name="Start_Tour" type="Button" parent="Menu"]
 margin_right = 181.0
-margin_bottom = 53.0
+margin_bottom = 73.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 1 )
 text = "Start Tour"
@@ -95,6 +97,7 @@ flat = true
 expand_icon = true
 
 [node name="Score_Board" type="Button" parent="Menu"]
+visible = false
 margin_top = 57.0
 margin_right = 181.0
 margin_bottom = 111.0
@@ -106,9 +109,9 @@ flat = true
 expand_icon = true
 
 [node name="Settings" type="Button" parent="Menu"]
-margin_top = 115.0
+margin_top = 77.0
 margin_right = 181.0
-margin_bottom = 169.0
+margin_bottom = 150.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 3 )
 text = "Settings"
@@ -117,7 +120,7 @@ flat = true
 expand_icon = true
 
 [node name="Quit" type="Button" parent="Menu"]
-margin_top = 173.0
+margin_top = 154.0
 margin_right = 181.0
 margin_bottom = 227.0
 size_flags_vertical = 3
@@ -139,53 +142,64 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = 34.0
-margin_top = 175.0
+margin_top = 200.0
 margin_right = 214.0
-margin_bottom = 471.0
+margin_bottom = 426.0
 
 [node name="Profile" type="Button" parent="Settings/VBoxContainer"]
+visible = false
 margin_right = 180.0
 margin_bottom = 56.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 5 )
 text = "Profile"
+icon = ExtResource( 10 )
 flat = true
+expand_icon = true
 
 [node name="Audio" type="Button" parent="Settings/VBoxContainer"]
-margin_top = 60.0
 margin_right = 180.0
-margin_bottom = 116.0
+margin_bottom = 72.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 6 )
 text = "Audio"
+icon = ExtResource( 10 )
 flat = true
+expand_icon = true
 
 [node name="Video" type="Button" parent="Settings/VBoxContainer"]
-margin_top = 120.0
+margin_top = 76.0
 margin_right = 180.0
-margin_bottom = 176.0
+margin_bottom = 149.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 7 )
 text = "Video"
+icon = ExtResource( 10 )
 flat = true
+expand_icon = true
 
 [node name="Tutorial" type="Button" parent="Settings/VBoxContainer"]
+visible = false
 margin_top = 180.0
 margin_right = 180.0
 margin_bottom = 236.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 8 )
 text = "Tutorial"
+icon = ExtResource( 10 )
 flat = true
+expand_icon = true
 
 [node name="Language" type="Button" parent="Settings/VBoxContainer"]
-margin_top = 240.0
+margin_top = 153.0
 margin_right = 180.0
-margin_bottom = 296.0
+margin_bottom = 226.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 9 )
 text = "Language"
+icon = ExtResource( 10 )
 flat = true
+expand_icon = true
 
 [node name="BackSettings" type="Button" parent="Settings"]
 anchor_top = 0.5
@@ -253,21 +267,18 @@ size_flags_vertical = 3
 margin_right = 28.0
 margin_bottom = 58.0
 size_flags_vertical = 3
-flat = true
 
 [node name="Borderless" type="CheckBox" parent="Video/HBoxContainer/Checks"]
 margin_top = 62.0
 margin_right = 28.0
 margin_bottom = 120.0
 size_flags_vertical = 3
-flat = true
 
 [node name="VSync" type="CheckBox" parent="Video/HBoxContainer/Checks"]
 margin_top = 124.0
 margin_right = 28.0
 margin_bottom = 183.0
 size_flags_vertical = 3
-flat = true
 
 [node name="BackToSettings4" type="Button" parent="Video"]
 anchor_top = 0.5
@@ -335,18 +346,27 @@ margin_top = 21.0
 margin_right = 212.0
 margin_bottom = 37.0
 size_flags_vertical = 6
+min_value = -10.0
+max_value = 10.0
+allow_lesser = true
 
 [node name="Music" type="HSlider" parent="Audio/HBoxContainer/Slider"]
 margin_top = 83.0
 margin_right = 212.0
 margin_bottom = 99.0
 size_flags_vertical = 6
+min_value = -10.0
+max_value = 10.0
+allow_lesser = true
 
 [node name="Sound FX" type="HSlider" parent="Audio/HBoxContainer/Slider"]
 margin_top = 145.0
 margin_right = 212.0
 margin_bottom = 161.0
 size_flags_vertical = 6
+min_value = -10.0
+max_value = 10.0
+allow_lesser = true
 
 [node name="BackToSettings3" type="Button" parent="Audio"]
 anchor_top = 0.5
@@ -452,17 +472,14 @@ expand_icon = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
-volume_db = -80.0
 bus = "Music"
 
 [node name="click_enter" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
-volume_db = -80.0
 bus = "Sound FX"
 
 [node name="click_back" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
-volume_db = -80.0
 bus = "Sound FX"
 
 [connection signal="pressed" from="Menu/Start_Tour" to="." method="_on_Start_Tour_pressed"]

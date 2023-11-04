@@ -18,73 +18,53 @@ var finished = false
 var current_screen = null
 var current_chactor = null
 var current_dialog_id = 0
+var BG = [$RewaStation2, $RewaFort3, $RewaFort2, $RewaFort1]
 
 func _ready():
-	#start()
-	$RewaStation2.show()
+
 	load_dialog()
 
-func start():
-	#dialog = load_dialog()
-	current_dialog_id = -1
-	#next_script()
-"""
-func next_script():
-	current_dialog_id += 1
-	if current_dialog_id >= len(dialog):
-		$Name.text = dialog[current_dialog_id]['name']
-		$Body.text = dialog[current_dialog_id]['text']
-"""
 func _process(delta):
 	$NextIcon.visible = finished
+	if $AudioStreamPlayer.playing == false:
+		$AudioStreamPlayer.play()
 	if Input.is_action_just_pressed("ui_accept"):
 		load_dialog()
-		"""
-func load_dialog():
-	var file = File.new()
-	if file.file_exists(d_file):
-		file.open(d_file, file.READ)
-		return parse_json(file.get_as_text())
-"""
 
+
+func hide_char():
+	$Girl2.hide()
+	$Girl3.hide()
+	$Man.hide()
+	$ModiJi.hide()
 
 func load_dialog():
 	if dialog_index < dialog.size():
 		finished = false
 		if dialog[dialog_index]['BG']=='1':
-			current_screen = $RewaStation2
+			$RewaStation2.show()
 			
 		elif dialog[dialog_index]['BG']=='2':
-			show_and_hide($RewaFort3, current_screen)
 			$RewaFort3.show()
-			current_screen = $RewaFort3
 			
 		elif dialog[dialog_index]['BG']=='3':
-			show_and_hide($RewaFort2, current_screen)
 			$RewaFort2.show()
 			
 		if dialog[dialog_index]['name']=='Father':
+			hide_char()
 			$Man.show()
-			$Girl2.hide()
-			$Girl3.hide()
-			$ModiJi.hide()
+			
 			
 		elif dialog[dialog_index]['name']=='Sister':
-			$Man.hide()
-			$Girl2.hide()
+			hide_char()
 			$Girl3.show()
-			$ModiJi.hide()
 			
 		elif dialog[dialog_index]['name']=='Mother':
-			$Man.hide()
+			hide_char()
 			$Girl2.show()
-			$Girl3.hide()
-			$ModiJi.hide()
 			
 		elif dialog[dialog_index]['name']=='Brother':
-			$Man.hide()
-			$Girl2.hide()
-			$Girl3.hide()
+			hide_char()
 			$ModiJi.show()
 			
 			
@@ -106,6 +86,7 @@ func load_dialog():
 
 func _on_Button_pressed():
 	get_tree().change_scene("res://MainMenu.tscn")
+	
 
 
 func _on_Tween_tween_completed(object, key):
@@ -117,16 +98,13 @@ func show_and_hide(first, second):
 	second.hide()
 
 
-func _on_RewaStation2_visibility_changed():
-	pass
-
-
 func _on_Next_pressed():
-
+	$click_enter.play()
 	load_dialog()
 
 
 func _on_Back_pressed():
+	$click_enter.play()
 	dialog_index -= 2
 	if dialog_index <= 0:
 		dialog_index=0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://DialogBox.gd" type="Script" id=1]
 [ext_resource path="res://ART/dialog_Box.png" type="Texture" id=2]
@@ -6,15 +6,17 @@
 [ext_resource path="res://fonts/xolonium-regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://ART/back_img.png" type="Texture" id=5]
 [ext_resource path="res://ART/Rewa/rewa_fort_1.webp" type="Texture" id=6]
-[ext_resource path="res://ART/Chacter/modi_ji-removebg-preview.png" type="Texture" id=7]
+[ext_resource path="res://ART/Chacter/brother.png" type="Texture" id=7]
 [ext_resource path="res://ART/Rewa/rewa_station_2.jpg" type="Texture" id=8]
 [ext_resource path="res://ART/Rewa/rewa_fort_3.jpg" type="Texture" id=9]
 [ext_resource path="res://ART/Rewa/rewa_fort_2.jpg" type="Texture" id=10]
-[ext_resource path="res://ART/Rewa/man-removebg-preview.png" type="Texture" id=11]
+[ext_resource path="res://ART/Chacter/Man.png" type="Texture" id=11]
 [ext_resource path="res://ART/Rewa/girl2.png" type="Texture" id=12]
 [ext_resource path="res://ART/Chacter/girl3-removebg-preview.png" type="Texture" id=13]
 [ext_resource path="res://ART/back_img2.png" type="Texture" id=14]
 [ext_resource path="res://ART/next_img.png" type="Texture" id=15]
+[ext_resource path="res://music/60_TablaFull_10_239_SP.wav" type="AudioStream" id=16]
+[ext_resource path="res://music/Dholak_06_697.wav" type="AudioStream" id=17]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
@@ -112,14 +114,14 @@ texture = ExtResource( 12 )
 
 [node name="Man" type="Sprite" parent="DialogBox"]
 visible = false
-position = Vector2( 880, 341 )
-scale = Vector2( 0.787599, 0.708207 )
+position = Vector2( 845, 298 )
+scale = Vector2( 0.418524, 0.418524 )
 texture = ExtResource( 11 )
 
 [node name="ModiJi" type="Sprite" parent="DialogBox"]
 visible = false
-position = Vector2( 164, 356 )
-scale = Vector2( 0.787599, 0.708207 )
+position = Vector2( 143, 366 )
+scale = Vector2( 0.314516, 0.314516 )
 texture = ExtResource( 7 )
 
 [node name="TextureRect" type="TextureRect" parent="DialogBox"]
@@ -167,6 +169,14 @@ anims/IDLE = SubResource( 4 )
 anims/RESET = SubResource( 5 )
 
 [node name="Tween" type="Tween" parent="DialogBox"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DialogBox"]
+stream = ExtResource( 16 )
+volume_db = -80.0
+
+[node name="click_enter" type="AudioStreamPlayer" parent="DialogBox"]
+stream = ExtResource( 17 )
+bus = "Sound FX"
 
 [node name="Back" type="Button" parent="DialogBox"]
 margin_left = -6.0
