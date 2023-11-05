@@ -504,5 +504,5 @@ bus = "Sound FX"
 [connection signal="pressed" from="Profile/BackToSettings1" to="." method="_on_BackToSettings1_pressed"]
 [connection signal="pressed" from="Language/BackToSettings" to="." method="_on_BackToSettings_pressed"]
 [connection signal="pressed" from="Start_Tour/BackSettings" to="." method="_on_BackSettings_pressed"]
-[connection signal="pressed" from="Score_Board/BackToMenu" to="." method="_on_BackSettings_pressed"]
 [connection signal="pressed" from="Score_Board/BackToMenu" to="." method="_on_BackToMenu_pressed"]
+[connection signal="pressed" from="Score_Board/BackToMenu" to="." method="_on_BackSettings_pressed"]
