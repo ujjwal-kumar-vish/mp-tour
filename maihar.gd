@@ -143,7 +143,7 @@ func load_dialog():
 		$Tween.start()
 	else :
 		queue_free()
-		get_tree().change_scene("res://MainMenu.tscn")
+		get_tree().change_scene("res://dialogues/Quiz/maihar_quiz.tscn")
 	dialog_index += 1
 
 

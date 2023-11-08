@@ -15,7 +15,7 @@ var dialog =[
 	{"name": "Father", "expression": "neutral", "text": "Mahakaleshwar, refers to Lord Shiva, the one among the trinity of Hinduism, i.e., Brahma, Vishnu and Maheshwara, wherein Lord Shiva is also known as Maheshwara. This is the temple ", "BG": "1"},
 	{"name": "Sister", "expression": "neutral", "text": "How many years old is Mahakaleshwar temple?", "BG": "1"},
 	{"name": "Father", "expression": "neutral", "text": "The temple was built in the 6th century AD by Kumarasena,the son of a former king of ujjain, Chandpradyot.", "BG": "1"},
-	{"name": "Brother", "expression": "neutral", "text": "How many to top places to visit in ujjain?", "BG": "2"},
+	{"name": "Brother", "expression": "neutral", "text": "How many places to visit in ujjain?", "BG": "2"},
 	{"name": "Father", "expression": "neutral", "text": "Mahakaleshwar Mandir, kal Bhairav Mandir, kumbh Mela and Ram Ghat.", "BG": "2"},
 	{"name": "Sister", "expression": "neutral", "text": "Which are the 3 jyotirlinga near Ujjain?", "BG": "2"},
 	{"name": "Mother", "expression": "neutral", "text": "Omkareshwar Jyotirlinga temple, Mahakaleshwar Jyotirlinga temple, Kaal Bhairab temple, Ram Mandir ghat and Har Siddhi Temple. All these places are known to attract tourists from around the country and world.", "BG": "2"},
@@ -101,7 +101,7 @@ func load_dialog():
 		$Tween.start()
 	else :
 		queue_free()
-		get_tree().change_scene("res://MainMenu.tscn")
+		get_tree().change_scene("res://dialogues/Quiz/ujjain_quiz.tscn")
 	dialog_index += 1
 
 

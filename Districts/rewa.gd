@@ -24,7 +24,7 @@ var dialog =[
 	{"name": "Sister", "expression": "neutral", "text": "That is amazing!", "BG": "4"},
 	{"name": "Brother", "expression": "neutral", "text": "Hy father,can you tell me the history of White Tiger Safari?", "BG": "6"},
 	{"name": "Father", "expression": "neutral", "text": " The white tiger was caught by Maharaja Martand Singh on May 27, 1951 from Sidhi district’s Bargadi for-est area and later the animal was brought to Govindarh Palace in Rewa from where it escaped the very next day and then again found in Mukundpur area about 26-27 km away from Rewa.", "BG": "4"},
-	{"name": "Brother", "expression": "neutral", "text": "o! woooo...", "BG": "4"},
+	{"name": "Brother", "expression": "neutral", "text": "Hmmmm...", "BG": "4"},
 	#{"name": "Mother", "expression": "neutral", "text": "Smile!", "BG": "4"},
 	#{"name": "Sister", "expression": "neutral", "text": "Smile!", "BG": "4"},
 	#{"name": "Father", "expression": "neutral", "text": "Smile!", "BG": "4"},
@@ -119,7 +119,7 @@ func load_dialog():
 		$Tween.start()
 	else :
 		queue_free()
-		get_tree().change_scene("res://MainMenu.tscn")
+		get_tree().change_scene("res://dialogues/Quiz/rewa_quiz.tscn")
 	dialog_index += 1
 
 

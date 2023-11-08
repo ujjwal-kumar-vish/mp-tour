@@ -27,3 +27,7 @@ func _on_Ujjain_pressed():
 
 func _on_Jabalpur_pressed():
 	get_tree().change_scene("res://Districts/Jabalpur.tscn")
+
+
+func _on_Indore_pressed():
+	pass # Replace with function body.

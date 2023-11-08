@@ -164,7 +164,6 @@ anims/RESET = SubResource( 4 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ujjain"]
 stream = ExtResource( 16 )
-volume_db = -80.0
 
 [node name="click_enter" type="AudioStreamPlayer" parent="ujjain"]
 stream = ExtResource( 4 )
@@ -192,7 +191,7 @@ flat = true
 icon_align = 1
 expand_icon = true
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="ujjain"]
 margin_left = 13.0
 margin_top = 19.0
 margin_right = 110.0
@@ -208,4 +207,4 @@ expand_icon = true
 [connection signal="tween_completed" from="ujjain/Tween" to="ujjain" method="_on_Tween_tween_completed"]
 [connection signal="pressed" from="ujjain/Back" to="ujjain" method="_on_Back_pressed"]
 [connection signal="pressed" from="ujjain/Next" to="ujjain" method="_on_Next_pressed"]
-[connection signal="pressed" from="Button" to="ujjain" method="_on_Button_pressed"]
+[connection signal="pressed" from="ujjain/Button" to="ujjain" method="_on_Button_pressed"]

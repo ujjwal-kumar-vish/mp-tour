@@ -6,18 +6,14 @@ export (String, FILE, "*.json") var d_file
 
 var dialog =[
 	{"name": "Brother", "expression": "neutral", "text": "Hy! We reached  Jabalpur in Bhedaghat, finally.", "BG": "5"},
-	{"name": "Sister", "expression": "neutral", "text": "Yah, but why are you so exited? its only 219.3 KM from satna. And it only took four hour thirty-one minutes to reach here.", "BG": "5"},
+	{"name": "Sister", "expression": "neutral", "text": "Yah, but why are you so exited? its only 18 KM from Jabalpur. And it only took thirty minutes to reach here.", "BG": "5"},
 	{"name": "Mother", "expression": "neutral", "text": "Now now, you two better behave, you do remember why we are here?", "BG": "5"},
 	{"name": "Brother", "expression": "neutral", "text": "Yes mother!", "BG": "5"},
 	{"name": "Sister", "expression": "neutral", "text": "Yes mother...", "BG": "5"},
-	{"name": "Father", "expression": "neutral", "text": "WE ARE HERE FOR THE LAND OF DHUANDHAR WATERFALL !!!!!", "BG": "1"},
+	{"name": "Father", "expression": "neutral", "text": "WE ARE HERE FOR THE DHUANDHAR WATERFALL !!!!!", "BG": "1"},
 		{"name": "Sister", "expression": "neutral", "text": "When was Smoky Falls included as a World Heritage by UNESCO?", "BG": "1"},
 		{"name": "Father", "expression": "neutral", "text": "Smoky Falls was inscribed as a World Heritage Site by UNESCO on 20 May 2021.", "BG": "1"},
 	{"name": "Sister", "expression": "neutral", "text": "What a beautiful sight to behold!", "BG": "2"},
-	{"name": "Mother", "expression": "neutral", "text": "the  most amazing beauty of the bhadaghat waterfall", "BG": "2"},
-	{"name": "Sister", "expression": "neutral", "text": "What is the distance between Jabalpur to Bhedaghat?", "BG": "2"},
-	{"name": "Mother", "expression": "neutral", "text": "18.5 km the distance Jabalpur to Bhedaghat", "BG": "3"},
-
 	{"name": "Sister", "expression": "neutral", "text": "Dhuandhar Falls is formed by the fall of water of which river?", "BG": "3"},
 		{"name": "Father", "expression": "neutral", "text": "Dhuandhar Falls is formed by the fall of water of Narmada river.", "BG": "3"},
 	{"name": "Sister", "expression": "neutral", "text": "Hy mother,When is a huge fair organized in Bhedaghat?", "BG": "3"},
@@ -27,9 +23,6 @@ var dialog =[
 	{"name": "Father", "expression": "neutral", "text": " Bhedaghat Waterfall is a center of attraction not only for Madhya Pradesh but for the whole of India.  It is considered to be the most beautiful and important place among the tourist places of Madhya Pradesh.  To see this, people come here not only from India but from different regions of the world.  This tourist destination has also been included as a ‘World Heritage’ by UNESCO on 20 May 2021.", "BG": "5"},
 	{"name": "Brother", "expression": "neutral", "text": "Which movie has been shot in Bhedaghat?", "BG": "5"},
 	{"name": "father", "expression": "neutral", "text": "Many films have also been shot here.  In 1974, Sunil Dutt's film 'Pran Jaye Par Vachan Na Jaye' was shot here in Bhedaghat.  The famous song, 'Raat Ka Nasha Abhi' from Shahrukh Khan's film 'Ashoka' has also been shot in Bhedaghat.  Apart from this, a film 'Mohenjo Daro' released in 2016 was also shot in Bhedaghat.", "BG": "3"},
-
-	{"name": "Brother", "expression": "neutral", "text": "Look mother and sister has also arrived", "BG": "3"},
-	{"name": "father", "expression": "neutral", "text": "oh there you are, what are we waiting for lets go inside", "BG": "3"},
 	]
 
 var dialog_index = 0
@@ -124,7 +117,7 @@ func load_dialog():
 		$Tween.start()
 	else :
 		queue_free()
-		get_tree().change_scene("res://MainMenu.tscn")
+		get_tree().change_scene("res://dialogues/Quiz/Jabalpur_quiz.tscn")
 	dialog_index += 1
 
 

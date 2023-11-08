@@ -6,9 +6,9 @@ export (String, FILE, "*.json") var d_file
 
 var dialog =[
 	{"name": "Brother", "expression": "neutral", "text": "Quiz time!!!", "BG": "1", "ans": "1", "option1": "none", "option2": "none", "option3": "none", "option4": "none"},
-	{"name": "Mother", "expression": "neutral", "text": "What is this place famous for?", "BG": "1", "ans": "3", "option1": "Birds", "option2": "Landscapes", "option3": "Tigers", "option4": "Cars"},
-	{"name": "Father", "expression": "neutral", "text": "How far is it from the main city?", "BG": "1", "ans": "1", "option1": "18km", "option2": "36km", "option3": "9km", "option4": "100km"},
-	{"name": "Sister", "expression": "neutral", "text": "When was tiger safari opened for public?", "BG": "2", "ans": "2", "option1": "2010", "option2": "2016", "option3": "2020", "option4": "2023"},
+	{"name": "Mother", "expression": "neutral", "text": "What is this place famous for?", "BG": "1", "ans": "1", "option1": "Sakti Peeth", "option2": "Hill", "option3": "Culture", "option4": "Food"},
+	{"name": "Father", "expression": "neutral", "text": "How far is it from the main city?", "BG": "1", "ans": "1", "option1": "35km", "option2": "25km", "option3": "45km", "option4": "100km"},
+	{"name": "Sister", "expression": "neutral", "text": "What is the meaning of 'Maihar'?", "BG": "2", "ans": "1", "option1": "Necklace of Mother", "option2": "Crown of Mother", "option3": "Throne of Father", "option4": "none"},
 	{"name": "Mother", "expression": "neutral", "text": "Thanks for visiting", "BG": "2", "ans": "1", "option1": "none", "option2": "none", "option3": "none", "option4": "none"},
 	]
 
